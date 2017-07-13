@@ -45,3 +45,14 @@ func xor(input string, key string) (out string) {
 
 	return hex.EncodeToString(rawslice)
 }
+
+func singleByteXorDecode(input string) (outkey string, outmsg string) {
+	rawinput, err := hex.DecodeString(input)
+	if err != nil {
+		fmt.Println("error", err)
+		return
+	}
+
+	//TODO learn more about scoring character freq.
+
+}
